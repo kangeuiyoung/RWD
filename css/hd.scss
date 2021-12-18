@@ -1,0 +1,245 @@
+body{
+    background-color: black;
+    min-height: 200vh;
+}
+
+.ofhy{ overflow: hidden !important;}
+
+#allMenu.show{
+    button{         
+        span{
+            width: 0;                        
+        }
+        &:after{
+            transform: rotate(-45deg) translateY(-14px);
+        }
+        &:before{
+            transform: rotate(45deg) translateY(14px);
+        }
+    }
+}
+
+.scroll #hd{
+    background-color: rgba(255, 255, 255, 1);
+    justify-content: space-between;  
+    padding:1em 0;
+    & > *{       
+    }
+    a{        
+    }
+
+    #allMenu{
+        button{            
+            span,
+            &:after,
+            &:before{
+                background-color: #000;
+            }           
+            span{                        
+            }
+            &:after,
+            &:before{
+            }
+        }
+    }
+    h1{
+        a {           
+            img{                
+            }
+        }
+    }
+}
+.scroll #gnb{
+    display: none;
+}
+
+#mgnb.wide{
+    transform: translateX(0) !important;
+}
+#mgnb{
+    position: fixed;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    transform: translateX(-100%);
+    margin: 0;
+    background-color: #fff;
+    transition: 0.5s;
+    ul{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-self: stretch;
+        li{
+            a.depth1{
+                background-color:#fff;
+                color: black;
+            }
+            .depth2{
+                position: relative;
+                transform: translateY(0);
+                opacity: 1;
+                border: 0;
+                a{
+                    color: #000;
+                }
+            }
+        } 
+    }               
+}
+.scroll #seachWrap{
+        .search_icon{          
+            background: url(../img/i_search_black.svg) transparent no-repeat;
+        }
+        .searchWbox{            
+            .searchinbox{                
+                .close{                    
+                }
+                input{                    
+                }
+                .b_search_icon{                    
+                   
+                }
+            }            
+        }
+    }
+
+
+#hd{
+    position: fixed;
+    left: 0;right: 0;top: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    transition: 0.5s;    
+    & > *{
+        margin: 0 2vw; //화면에 비율 2%를 좌우여백으로 주어라.
+    }
+    a{
+        color:black;
+    }
+    #allMenu{
+        button{
+            display: block;
+            width:30px;
+            background-color: transparent;
+            span,
+            &:after,
+            &:before{
+                display: block;
+                height:2px;
+                background-color: white;
+            }
+           
+            span{
+               margin:8px 0;              
+            }
+            &:after,
+            &:before{
+                content: "";
+               
+            }
+        }
+    }
+    h1{
+        a {
+            display: block;
+            max-width:180px;
+            min-width:120px;
+            width:22vw;
+            img{
+                display: block;
+                width:100%;
+            }
+        }
+    }
+}
+
+#gnb{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    li{
+        position: relative;           
+        a.depth1{
+            font-size: 1.6em;
+            display: block;
+            padding:2em;
+            z-index: 10000;
+            position: relative;
+            background-color:black;
+        }
+        &:hover .depth2{
+            transform: translateY(0);
+            opacity: 1;
+        }     
+        .depth2{
+            position: absolute;
+            background: white;
+            width:100%;
+            border:1px solid #ccc;
+            padding: 2em;
+            left:0;
+            top:100%;
+            border-top:0;
+            transform: translateY(-100%); //자신의 높이만큼 위로 올라가라
+            transition: 0.5s;
+            opacity: 0;
+            ul{
+                li{
+                    a{
+                        color:#222;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//상단 오른쪽 검색버튼과 검색레이어
+#seachWrap{
+    .search_icon{      
+        display: block; 
+        width:35px;
+        height:35px;
+        background: url(../img/i_search_white.svg) transparent no-repeat;
+    }
+    .searchWbox{
+        position: fixed;
+        background-color: rgb(255, 255, 255);
+        left: 15px; right: 15px; top: 15px; bottom: 15px;
+        z-index: 10000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        .searchinbox{
+            padding: 15px;
+            display: flex;
+            align-items: baseline;
+            position: relative;
+            .close{
+                position: absolute;
+                top: 0; right: 0;
+                width: 35px; height: 35px;
+                background: url(../img/btn_close.svg) transparent no-repeat center;
+                font-size: 0; line-height: 0;
+            }
+            input{
+                min-width: calc(320px - 3vw);
+                max-width: 600px;
+                border-bottom: 1px solid #222;
+                line-height: 2;
+                font-size: 1.5rem;
+            }
+            .b_search_icon{
+                font-size: 0;
+                line-height: 0;
+                width: 35px;
+                height: 35px;
+                background: url(../img/i_search_black.svg) transparent no-repeat;
+            }
+        }        
+    }
+}
+          
+         

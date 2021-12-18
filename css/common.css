@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* **************************************** *
+ * RESET FILES
+ * **************************************** */
+ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,time,figure,article,nav,header,footer,hgroup,video,audio,aside,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,section,input,textarea,select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: inherit;
+    vertical-align: baseline;
+    font-family:'Roboto', 'NotoSansKR', sans-serif;
+    box-sizing:border-box;
+    font-size:15px;
+    font-weight:400;
+    color:#000;
+    word-break: keep-all;
+}
+:focus{outline:none;}
+ol,ul{list-style: none;font-size:0;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th,td{text-align:left;font-weight:inherit;word-break:keep-all}
+figure,article,header,main,footer,nav,hgroup,video,audio,aside,form{display: block;}
+a,input,textarea,select,label{display:inline-block;text-decoration:none;}
+img{width:100%;height:auto;border:0;vertical-align:top;}
+caption,.blind{overflow:hidden !important;visibility:hidden !important;padding:0 !important;margin:0 !important; width:0!important;height:0 !important;font-size:0 !important;line-height:0 !important;}
+sup{vertical-align:super}
+button{border:0;cursor:pointer;}
+strong{font-weight:700;}
+input {-webkit-appearance: none;-webkit-border-radius: 0;}
+select option{color:#000}
